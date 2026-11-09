@@ -46,7 +46,7 @@ This repo is a source to copy from. Copy the whole `Sentinel-Prompts/` folder in
 The quickest way is this command, run from your project's root. It needs no git.
 
 ```
-mkdir -p Sentinel-Prompts && cd Sentinel-Prompts && for f in 00-project-discovery.md 01-design-quality-audit.md 02-integration-audit.md 03-quality-gate-implementation.md 04-maintainer-guide.md sentinel-init.md; do curl -sO "https://raw.githubusercontent.com/timsamoff/Sentinel/main/Sentinel-Prompts/$f"; done && cd ..
+mkdir -p Sentinel-Prompts && cd Sentinel-Prompts && for f in 00-project-discovery.md 01-design-quality-audit.md 02-integration-audit.md 03-quality-gate-implementation.md 04-maintainer-guide.md sentinel-init.md; do curl -sO "https://raw.githubusercontent.com/timsamoff/sentinel/main/Sentinel-Prompts/$f"; done && cd ..
 ```
 
 If you don't have `curl`, replace `curl -sO` with `wget -q`. If you'd rather not run a command, clone this repo, copy the folder out, and delete the clone.
