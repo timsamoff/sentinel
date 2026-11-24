@@ -3,7 +3,7 @@
 
 # Sentinel
 
-**Version 1.8.0**
+**Version 1.8.1**
 
 ***Rigorous, repeatable quality gates for any AI coding agent, any project, any language.***
 
@@ -129,7 +129,7 @@ Where your tool can run a command at session start, prompt 3 offers a hook. The 
 
 ## Maintainer guide
 
-Prompt 4 is optional, and `sentinel-init.md` offers it once after prompt 2. It measures the project, reports the file and line counts, and recommends one of four choices: no guide, a one-page guide, a one-page guide that grows as commits touch new areas, or a full guide. For a large project or one with several apps, the full guide covers only the areas you choose.
+Prompt 4 is optional, and `sentinel-init.md` offers it once after prompt 2. It measures the project, reports the file and line counts, and recommends one of three choices: a one-page guide, a one-page guide that grows as commits touch new areas, or a full guide. For a large project or one with several apps, the full guide covers only the areas you choose.
 
 Two costs come with any guide. You review the first draft, and every later commit that changes covered code has to update the guide and add a progress entry too. The agent records that rule in `AGENTS.md` and proposes a quality gate for prompt 3 to build. The gate shows a reminder when a commit changes covered source without touching the guide, or blocks the commit if you choose that. It can see that the guide was touched, not that it's right, so you can run prompt 4 again at any time to verify every path, name, and command against the code.
 

@@ -1,6 +1,6 @@
 # Sentinel: Maintainer Guide Prompt (Portable, optional, for any AI coding agent, any project)
 
-**Version 1.8.0**
+**Version 1.8.1**
 
 This prompt is optional. The other four don't need it, and nothing in the suite runs it unless the user asks. It maintains a living reference for developers that documents the project's scope, architecture, decisions, current state, and development progress. Its purpose is to preserve project knowledge, give an up-to-date picture of the whole project, and make it easier to resume work after time away, including for a developer who didn't write the code. It reads the project and writes files, and it proposes one quality gate without building it. Run it after `00-project-discovery.md`, and ideally after `02-integration-audit.md` and before `03-quality-gate-implementation.md`, so `03` can build the guide's check in the same pass. Run it again later to verify or change the guide.
 
@@ -34,14 +34,13 @@ Report what you counted, not a bare label: "about 340 files and 48,000 lines acr
 
 Ask one question. Describe each option by what the user gets and what it asks of them:
 
-1. **No guide.** Nothing is created and nothing is added to `AGENTS.md`.
-2. **One-page guide.** One file of about 300 lines covering the project's scope and current state, where to change things, the rules the code relies on but doesn't enforce, the fragile spots, how to build, run, and test, and a short log of recent progress. You review one file.
-3. **One page now, grows as you go.** The same page, plus a short section for an area each time a commit touches an area the guide doesn't cover yet. The guide lists which areas are covered, so coverage follows where the work happens.
-4. **Full guide.** About a dozen files covering scope, architecture, vocabulary, state, decisions, step-by-step edits, checklists, and a full progress log. It gives a new maintainer the most and asks the most to review and keep current. For a large project or one with several apps, offer this as "full guide for areas you choose" instead, and ask which areas.
+1. **One-page guide.** One file of about 300 lines covering the project's scope and current state, where to change things, the rules the code relies on but doesn't enforce, the fragile spots, how to build, run, and test, and a short log of recent progress. You review one file.
+2. **One page now, grows as you go.** The same page, plus a short section for an area each time a commit touches an area the guide doesn't cover yet. The guide lists which areas are covered, so coverage follows where the work happens.
+3. **Full guide.** About a dozen files covering scope, architecture, vocabulary, state, decisions, step-by-step edits, checklists, and a full progress log. It gives a new maintainer the most and asks the most to review and keep current. For a large project or one with several apps, offer this as "full guide for areas you choose" instead, and ask which areas.
 
 State two costs with the options, in the same words each time: the first draft needs the user's review before it can be trusted, and every later commit that changes covered code has to update the guide too.
 
-If the answer is no guide, add `Maintainer guide: none` to `PROJECT_PROFILE.md` so later runs don't ask again, and stop.
+The user already said yes to a guide (in `sentinel-init.md`'s offer, or by running this prompt directly), so "no guide" is not listed as an option. If they decline anyway, add `Maintainer guide: none` to `PROJECT_PROFILE.md` so later runs don't ask again, and stop.
 
 ### Part 2 - Two follow-up questions
 
