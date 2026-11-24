@@ -7,6 +7,13 @@
 
 ***Rigorous, repeatable quality gates for any AI coding agent, any project, any language.***
 
+AI coding agents work fast, but they don't always follow your project's rules. They miss files affected by a change, drift from your conventions, and overlook things that should be checked. Sentinel teaches your agent how your project works, then builds the checks to keep it on track.
+
+- Audits code and design quality, documenting its findings
+- Maps every place a change needs to touch
+- Builds pre-commit checks that inspect only each commit's diff
+- Keeps commit messages and session handoffs consistent
+
 🌐 **[View the Sentinel website](https://samoff.com/sentinel/)**
 
 ### Contents
@@ -27,7 +34,7 @@
 
 ## What it does
 
-Sentinel is a set of four prompts, plus an optional fifth, that give an AI coding agent a structured process for any code or design project. The agent learns what the project is, audits its code and design quality, and maps every place a future change needs to touch. It then builds automated checks that hold those standards in place.
+Sentinel is a set of four prompts, plus an optional fifth, that give an AI coding agent a structured process for any code or design project. The agent learns the project, audits it, and maps what a change needs to touch. It then builds automated checks that hold those standards in place.
 
 Setup is the expensive part. The prompts read your actual codebase and history, which costs time and tokens once. In return, you get a pre-commit hook that checks only each commit's diff, plus a periodic full-repo scan for slower drift, so ordinary commits stay cheap.
 
