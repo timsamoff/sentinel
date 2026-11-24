@@ -34,15 +34,15 @@
   <meta property="og:title" content="Sentinel | Quality Gates for AI Coding Agents">
   <meta property="og:description" content="Open-source prompts that have an AI coding agent audit your project, map where changes touch, and build quality gates.">
   <meta property="og:url" content="https://offware.io/sentinel/">
-  <meta property="og:image" content="https://offware.io/sentinel/media/sentinel-icon-512.png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
-  <meta property="og:image:alt" content="The Sentinel icon: a pale blue shield wrapped in two steel ribbons.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://offware.io/sentinel/media/sentinel-social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Sentinel icon, a pale blue shield wrapped in two steel ribbons, beside the name Sentinel and the line “Rigorous, repeatable quality gates for any AI coding agent, any project, any language.”">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sentinel | Quality Gates for AI Coding Agents">
   <meta name="twitter:description" content="Open-source prompts that have an AI coding agent audit your project, map where changes touch, and build quality gates.">
-  <meta name="twitter:image" content="https://offware.io/sentinel/media/sentinel-icon-512.png">
-  <meta name="twitter:image:alt" content="The Sentinel icon: a pale blue shield wrapped in two steel ribbons.">
+  <meta name="twitter:image" content="https://offware.io/sentinel/media/sentinel-social.png">
+  <meta name="twitter:image:alt" content="The Sentinel icon, a pale blue shield wrapped in two steel ribbons, beside the name Sentinel and the line “Rigorous, repeatable quality gates for any AI coding agent, any project, any language.”">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,10 +97,16 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <img src="media/sentinel-icon-352.png" width="160" height="160" alt="Sentinel">
       <h1>Sentinel</h1>
       <p class="version">Version 1.8.0</p>
       <p class="tagline">Rigorous, repeatable quality gates for any AI coding agent, any project, any language.</p>
+      <p class="problem">AI coding agents work fast, but they don’t always follow your project’s rules. They miss files affected by a change, drift from your conventions, and overlook things that should be checked. Sentinel teaches your agent how your project works, then builds the checks to keep it on track.</p>
+      <ul class="hero-points">
+        <li>Audits code and design quality, documenting its findings</li>
+        <li>Maps every place a change needs to touch</li>
+        <li>Builds pre-commit checks that inspect only each commit’s diff</li>
+        <li>Keeps commit messages and session handoffs consistent</li>
+      </ul>
       <p class="actions">
         <a class="button" href="#installation">Install</a>
         <a class="button button-secondary" href="https://github.com/timsamoff/sentinel">View on GitHub</a>
@@ -114,6 +120,8 @@
       <p class="filter-status" role="status" aria-live="polite"></p>
     </search>
 
+    <div class="sidebar">
+    <img class="sidebar-icon" src="media/sentinel-icon-352.png" width="160" height="160" alt="Sentinel">
     <nav aria-label="Page contents" class="contents">
       <h2>Contents</h2>
       <ul>
@@ -133,10 +141,11 @@
         <li><a href="#license">License</a></li>
       </ul>
     </nav>
+    </div>
 
     <section id="what-it-does">
       <h2>What it does</h2>
-      <p>Sentinel is a set of four prompts, plus an optional fifth, that give an AI coding agent a structured process for any code or design project. The agent learns what the project is, audits its code and design quality, and maps every place a future change needs to touch. It then builds automated checks that hold those standards in place.</p>
+      <p>Sentinel is a set of four prompts, plus an optional fifth, that give an AI coding agent a structured process for any code or design project. The agent learns the project, audits it, and maps what a change needs to touch. It then builds automated checks that hold those standards in place.</p>
       <p>Setup is the expensive part. The prompts read your actual codebase and history, which costs time and tokens once. In return, you get a pre-commit hook that checks only each commit’s diff, plus a periodic full-repo scan for slower drift, so ordinary commits stay cheap.</p>
       <p>Three terms come up often:</p>
       <ul>
